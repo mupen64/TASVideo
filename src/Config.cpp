@@ -143,11 +143,11 @@ void Config_SaveConfig()
 
 void Config_ApplyDlgConfig(HWND hWndDlg)
 {
-    char text[256];
+    wchar_t text[256]{};
     int i;
 
-    SendDlgItemMessage(hWndDlg, IDC_CACHEMEGS, WM_GETTEXT, 4, (LPARAM)text);
-    cache.maxBytes = atol(text) * 1048576;
+    Edit_GetText(GetDlgItem(hWndDlg, IDC_CACHEMEGS), text, 4);
+    cache.maxBytes = _wtol(text) * 1048576;
 
     OGL.forceBilinear = (SendDlgItemMessage(hWndDlg, IDC_FORCEBILINEAR, BM_GETCHECK, NULL, NULL) == BST_CHECKED);
     auto filter = OGL.textureFilter;
@@ -169,11 +169,11 @@ void Config_ApplyDlgConfig(HWND hWndDlg)
     i = SendDlgItemMessage(hWndDlg, IDC_WINDOWEDRES, CB_GETCURSEL, 0, 0);
     if (i == SendMessage(GetDlgItem(hWndDlg, IDC_WINDOWEDRES), CB_GETCOUNT, 0, 0) - 1)
     {
-        char val[32];
-        SendMessage(GetDlgItem(hWndDlg, IDC_WINDOWED_X), WM_GETTEXT, 32, (LPARAM)val);
-        OGL.windowedWidth = atoi(val);
-        SendMessage(GetDlgItem(hWndDlg, IDC_WINDOWED_Y), WM_GETTEXT, 32, (LPARAM)val);
-        OGL.windowedHeight = atoi(val);
+        wchar_t val[32]{};
+        SendMessage(GetDlgItem(hWndDlg, IDC_WINDOWED_X), WM_GETTEXT, std::size(val), (LPARAM)val);
+        OGL.windowedWidth = _wtoi(val);
+        SendMessage(GetDlgItem(hWndDlg, IDC_WINDOWED_Y), WM_GETTEXT, std::size(val), (LPARAM)val);
+        OGL.windowedHeight = _wtoi(val);
     }
     else
     {
