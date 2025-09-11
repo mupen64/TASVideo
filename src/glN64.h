@@ -24,6 +24,6 @@ extern std::filesystem::path screenDirectory;
 #define PLUGIN_TARGET L" Release"
 #endif
 
-#define PLUGIN_NAME L"bettergln " PLUGIN_VERSION PLUGIN_ARCH PLUGIN_TARGET
+#define PLUGIN_NAME L"TASVideo " PLUGIN_VERSION PLUGIN_ARCH PLUGIN_TARGET
 
 #endif

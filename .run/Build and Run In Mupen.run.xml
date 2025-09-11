@@ -1,6 +1,6 @@
 ﻿<component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Build and Run In Mupen" type="ShConfigurationType">
-    <option name="SCRIPT_TEXT" value="Copy-Item -Path &quot;build\bettergln-x86-release.dll&quot; -Destination &quot;..\mupen64-rr-lua-\build\Views.Win32\plugin&quot;; Start-Process &quot;..\mupen64-rr-lua-\build\Views.Win32\mupen64-x86-sse2-release.exe&quot;" />
+    <option name="SCRIPT_TEXT" value="Copy-Item -Path &quot;build\TASVideo-x86-release.dll&quot; -Destination &quot;..\mupen64-rr-lua-\build\Views.Win32\plugin&quot;; Start-Process &quot;..\mupen64-rr-lua-\build\Views.Win32\mupen64-x86-sse2-release.exe&quot;" />
     <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
     <option name="SCRIPT_PATH" value="" />
     <option name="SCRIPT_OPTIONS" value="" />

@@ -86,7 +86,7 @@ EXPORT void CALL ChangeWindow(void)
 
 EXPORT void CALL DllAbout(void* hParent)
 {
-    const auto msg = PLUGIN_NAME "\nPart of the Mupen64 project family.\n\nhttps://github.com/mupen64/bettergln";
+    const auto msg = PLUGIN_NAME "\nPart of the Mupen64 project family.\n\nhttps://github.com/mupen64/TASVideo";
     MessageBox((HWND)hParent, msg, PLUGIN_NAME, MB_OK | MB_ICONINFORMATION);
 }
 
