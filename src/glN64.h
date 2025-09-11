@@ -10,7 +10,7 @@ extern HINSTANCE hInstance;
 extern void (*CheckInterrupts)(void);
 extern std::filesystem::path screenDirectory;
 
-#define PLUGIN_VERSION L"1.4-rc2"
+#define PLUGIN_VERSION L"1.4"
 
 #ifdef _M_X64
 #define PLUGIN_ARCH L"-x64"
