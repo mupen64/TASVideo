@@ -36,22 +36,22 @@ jobs:
 
       - name: Build x86
         working-directory: ${{env.GITHUB_WORKSPACE}}
-        run:  msbuild bettergln.sln /p:Configuration=Release /p:Platform=Win32 /m
+        run:  msbuild TASVideo.sln /p:Configuration=Release /p:Platform=Win32 /m
 
       - name: 'Upload x86 SSE2 Release Artifact'
         uses: actions/upload-artifact@v4
         with:
           name: mupen-x86-sse2
-          path: build/bettergln-x86-release.dll
+          path: build/TASVideo-x86-release.dll
           retention-days: 14
 
       - name: Build x64
         working-directory: ${{env.GITHUB_WORKSPACE}}
-        run: msbuild bettergln.sln /p:Configuration=Release /p:Platform=x64 /m
+        run: msbuild TASVideo.sln /p:Configuration=Release /p:Platform=x64 /m
 
       - name: 'Upload x64 SSE2 Release Artifact'
         uses: actions/upload-artifact@v4
         with:
           name: mupen-x64-sse2
-          path: build/bettergln-x64-release.dll
+          path: build/TASVideo-x64-release.dll
           retention-days: 14
